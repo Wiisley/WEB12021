@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <title>Trabalho Desenvolvimento Web1 2021 - UFMT</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <img src="./img/logo.png">
+                <li><a href="index.html">Principal</a></li>
+                <li><a href="usuarios.php">Usuários</a></li>
+                <li><a href="https://www.ic.ufmt.br/" target="_blank">IC UFMT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="conteudo-formulario">
+        <h2>Cadastro de Usuário</h2><br>
+        <form action="./php/criar.php" method="POST">
+            <div class="input-group">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" placeholder="Nome do Usuário..." required>
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome do Usuário..." required>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="E-mail do Usuário..." required>
+
+            </div>
+
+            <div class="input-group">
+                <label for="endereco">Endereço</label>
+                <input type="text" name="endereco" id="endereco" placeholder="Endereço..." required>
+                <label for="cidade">Cidade</label>
+                <input type="text" name="cidade" id="cidade" placeholder="Cidade..." required>
+                <label for="telefone">Telefone</label>
+                <input type="tel" name="telefone" id="telefone" placeholder="(00) 00000-0000" onkeypress="mascara(this, telefone);" onblur="marcara(this, telefone);" required>
+            </div>
+
+            <div class="input-group">
+                <label for="rga">RGA</label>
+                <input type="text" name="rga" id="rga" placeholder="RGA do Usuário..." required>
+                <label for="curso">Curso</label>
+                <select name="curso" id="curso" required>
+                    <option disabled selected>Escolha o Curso...</option>
+                    <option value="Ciências da Computação">Ciências da Computação</option>
+                    <option value="Sistemas de Informação">Sistemas de Informação</option>
+                </select>
+                <label for="campus">Campus</label>
+                <select name="campus" id="campus" required>
+                    <option disabled selected>Campus...</option>
+                    <option value="Barra do Garças">Barra do Garças</option>
+                    <option value="Cuiabá">Cuiabá</option>
+                    <option value="Rondonópolis">Rondonópolis</option>
+                    <option value="Varzea Grande">Varzea Grande</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <p>Você Considera o Curso :&nbsp;&nbsp;</p>
+                <label for="satisfacao">Ruim</label>
+                <input type="radio" id="satisfacao" name="satisfacao" value="Ruim">
+                <label for="satisfacao">Bom</label>
+                <input type="radio" id="satisfacao" name="satisfacao" value="Bom">
+                <label for="satisfacao">Excelente</label>
+                <input type="radio" id="satisfacao" name="satisfacao" value="Excelente" checked>
+            </div>
+
+            <div class="input-group">
+                <label for="descricao">Quem é Você?</label>
+                <textarea name="descricao" id="descricao" cols="10" rows="5" placeholder="Fale um pouco sobre você..." required></textarea>
+            </div>
+
+            <input name="gravar" class="botao-enviar" type="submit" value="Gravar">
+        </form>
+    </div>
+
+
+    <footer>
+
+
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
